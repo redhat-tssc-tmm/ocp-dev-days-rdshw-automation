@@ -108,3 +108,42 @@ spec:
         developerHub:
           name: developer-hub
           namespace: {{ ocp4_workload_dev_days_rdshw_developer_hub_namespace }}
+
+        # TODO: RHACS - uncomment and add Ansible variables when ready
+        # rhacs:
+        #   enabled: true
+        #   name: rhacs
+        #   namespace: rhacs
+        #   operatorNamespace: rhacs-operator
+        #   clusterName: local-secured-cluster
+        #
+        # vault.secrets.rhacs:
+        #   clientId: rhacs
+        #   clientSecret: "{{ '{{ ocp4_workload_dev_days_rdshw_rhacs_client_secret }}' }}"
+
+        # TODO: TPA - uncomment and add Ansible variables when ready
+        # tpa:
+        #   enabled: true
+        #   name: tpa
+        #   namespace: trusted-profile-analyzer
+        #   rhdaNamespace: rhda-backend
+        #   chartVersion: "*"
+        #   images:
+        #     dbMonitor: "{{ '{{ ocp4_workload_dev_days_rdshw_tpa_db_monitor_image }}' }}"
+        #     rhdaBackend: "{{ '{{ ocp4_workload_dev_days_rdshw_tpa_rhda_backend_image }}' }}"
+        #     rhdaInitImage: "{{ '{{ ocp4_workload_dev_days_rdshw_tpa_rhda_init_image }}' }}"
+        #     postgresql: "{{ '{{ ocp4_workload_dev_days_rdshw_tpa_postgresql_image }}' }}"
+        #     dataset: "{{ '{{ ocp4_workload_dev_days_rdshw_tpa_dataset_image }}' }}"
+        #
+        # vault.secrets.tpa:
+        #   clientSecret: "{{ '{{ ocp4_workload_dev_days_rdshw_tpa_client_secret }}' }}"
+
+        # TODO: RHTAS - uncomment and add Ansible variables when ready
+        # rhtas:
+        #   enabled: true
+        #   name: rhtas
+        #   namespace: trusted-artifact-signer
+        #   instance: securesign
+        #   rootCert:
+        #     email: "{{ '{{ ocp4_workload_dev_days_rdshw_rhtas_root_cert_email }}' }}"
+        #     org: "{{ '{{ ocp4_workload_dev_days_rdshw_rhtas_root_cert_org }}' }}"
